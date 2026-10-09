@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIBE//SLOP™</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
+
+:root {
+  --bg: #10100f;
+  --fg: #f5f0e8;
+  --acid: #d9ff3f;
+  --pink: #ff6bca;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+nav {
+  padding: 24px 6%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #333;
+  font-size: 12px;
+}
+
+.logo { font-weight: bold; letter-spacing: -1px; }
+.logo span { color: var(--acid); }
+
+nav a {
+  color: #aaa;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.hero {
+  min-height: 85vh;
+  padding: 10vh 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tag {
+  color: var(--acid);
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(65px, 13vw, 175px);
+  line-height: .78;
+  letter-spacing: -.09em;
+  margin: 35px 0;
+}
+
+.outline {
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+}
+
+.pink { color: var(--pink); }
+
+.hero p {
+  color: #aaa;
+  max-width: 360px;
+  line-height: 1.7;
+}
+
+button, .button {
+  border: 0;
+  background: var(--acid);
+  color: #111;
+  padding: 16px 22px;
+  font: inherit;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  transition: .2s;
+}
+
+button:hover, .button:hover {
+  background: var(--pink);
+  transform: translateY(-3px);
+}
+
+section { padding: 90px 8%; }
+
+h2 {
+  font-size: clamp(38px, 7vw, 85px);
+  line-height: .9;
+  letter-spacing: -.07em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.card {
+  border: 1px solid #393932;
+  padding: 25px;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: .2s;
+}
+
+.card:hover {
+  border-color: var(--acid);
+  transform: translateY(-5px);
+}
+
+.card small { color: var(--acid); }
+
+.card h3 {
+  font-size: 30px;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.card p {
+  color: #999;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.manifesto {
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+.manifesto blockquote {
+  font-size: clamp(30px, 5vw, 65px);
+  letter-spacing: -3px;
+  margin: 35px 0;
+}
+
+.manifesto em {
+  color: var(--acid);
+  font-style: normal;
+}
+
+.cta {
+  background: var(--pink);
+  color: #111;
+  padding: 80px 8%;
+}
+
+.cta button {
+  background: #111;
+  color: white;
+}
+
+footer {
+  padding: 25px 8%;
+  color: #777;
+  font-size: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+#toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--acid);
+  color: #111;
+  padding: 16px;
+  font-size: 12px;
+  font-weight: bold;
+  display: none;
+  z-index: 10;
+}
+
+@media (max-width: 700px) {
+  .grid { grid-template-columns: 1fr; }
+  nav a { display: none; }
+  section { padding: 60px 6%; }
+  footer { flex-direction: column; }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">VIBE<span>//</span>SLOP™</div>
+  <div>
+    <a href="#features">FEATURES</a>
+    <a href="#lore">THE LORE</a>
+    <a href="#join">JOIN</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="tag">✳ The future of absolutely nothing</div>
+
+  <h1>
+    LESS<br>
+    <span class="outline">THINKING.</span><br>
+    <span class="pink">MORE VIBING.</span>
+  </h1>
+
+  <p>
+    We leverage next-generation synergy to disrupt the
+    paradigm of doing literally anything useful.
+  </p>
+
+  <div>
+    <a class="button" href="#features">Consume the slop ↘</a>
+  </div>
+</header>
+
+<div style="
+  background:var(--acid);
+  color:#111;
+  padding:14px;
+  overflow:hidden;
+  white-space:nowrap;
+  font-size:12px;
+  font-weight:bold;
+">
+  ✳ DISRUPT NOTHING ✳ AI-ADJACENT ✳ VC-UNFUNDABLE
+  ✳ BUILT DIFFERENT ✳ ROADMAP PENDING ✳ DISRUPT NOTHING
+</div>
+
+<section id="features">
+  <div class="tag">01 / The product</div>
+  <h2>FEATURES<br>WITH NO PURPOSE.</h2>
+
+  <div class="grid">
+    <div class="card">
+      <small>FEATURE_001</small>
+      <div>
+        <h3>Synergy<br>Engine™</h3>
+        <p>Turns one normal sentence into 46 slides with zero conclusions.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <small>FEATURE_002</small>
+      <div>
+        <h3>Vibe<br>Analytics</h3>
+        <p>Our proprietary AI measures the vibes. The results are inconclusive.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <small>FEATURE_003</small>
+      <div>
+        <h3>One-Click<br>Pivot™</h3>
+        <p>Our roadmap is a mood board. Our deadlines are a social construct.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="manifesto" id="lore">
+  <div class="tag">02 / Our mission</div>
+
+  <blockquote>
+    "If it looks like a startup and sounds like
+    <em>bullshit,</em> you're probably onto something."
+  </blockquote>
+
+  <p style="color:#999;max-width:500px;line-height:1.8">
+    In a world where every app is revolutionary,
+    every chatbot is your copilot, and every landing page
+    has a gradient, we chose to make things worse.
+    <br><br>
+    We didn't reinvent the wheel.
+    We put AI in it and charged $19.99 a month.
+  </p>
+</section>
+
+<section id="join">
+  <div class="tag">03 / Your calling</div>
+  <h2>YOUR FUTURE<br>IS <span style="color:var(--acid)">LOADING.</span></h2>
+
+  <p style="color:#999;line-height:1.7">
+    Join 0+ satisfied users in our completely fictional
+    ecosystem of digital nonsense.
+  </p>
+
+  <button onclick="join()">SECURE MY SPOT ↗</button>
+</section>
+
+<div class="cta">
+  <div class="tag" style="color:#111">THE BOTTOM LINE</div>
+  <h2>MAKE IT<br>LOOK EXPENSIVE.</h2>
+  <button onclick="chaos()">ACTIVATE CHAOS ✳</button>
+</div>
+
+<footer>
+  <span>© 2026 VIBE//SLOP™</span>
+  <span>MADE OF PIXELS & QUESTIONABLE DECISIONS</span>
+  <span>NO ACTUAL SYNERGY WAS HARMED</span>
+</footer>
+
+<div id="toast"></div>
+
+<script>
+function notify(message) {
+  const toast = document.getElementById('toast');
+  toast.textContent = message;
+  toast.style.display = 'block';
+
+  clearTimeout(window.toastTimer);
+  window.toastTimer = setTimeout(() => {
+    toast.style.display = 'none';
+  }, 2500);
+}
+
+function join() {
+  notify('YOU ARE ON THE LIST. THE LIST IS A TEXT FILE.');
+}
+
+function chaos() {
+  const colors = ['#d9ff3f', '#ff6bca', '#9c8cff', '#ff784f'];
+  const color = colors[Math.floor(Math.random() * colors.length)];
+
+  document.documentElement.style.setProperty('--acid', color);
+
+  document.querySelectorAll('.card').forEach(card => {
+    card.style.transform =
+      `rotate(${Math.random() * 4 - 2}deg)`;
+  });
+
+  notify('CHAOS DEPLOYED. SHAREHOLDERS CONFUSED.');
+}
+</script>
+
+</body>
+</html>
